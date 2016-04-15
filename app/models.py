@@ -61,6 +61,14 @@ class User(db.Model):
         user = User.query.get(data['id'])
         return user
 
+    def is_student(self):
+        if self.type == 'student':
+            return True
+
+    def is_teacher(self):
+        if self.type == 'teacher':
+            return True
+
     def __repr__(self):
         return '<User %r>' % (self.username)
 

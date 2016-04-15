@@ -1,9 +1,6 @@
-from flask import Blueprint, jsonify, request
-from flask_httpauth import HTTPBasicAuth
+from flask import Blueprint
 
 from .authentication import auth
-from .models import Student, User, db, Teacher
-from .responses import make_response
 
 studentAPI = Blueprint('studentAPI', __name__)
 
